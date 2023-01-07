@@ -12,11 +12,11 @@
     "allowSyntheticDefaultImports": true,
     "lib": ["dom", "es2021"]
   },
+  "include": ["src/**/*"],
   "exclude": [
     "dist",
     "example-dist",
     "example",
-    "test",
     "node_modules"
   ]
 }

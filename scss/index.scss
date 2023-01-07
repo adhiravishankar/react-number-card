@@ -1,11 +1,25 @@
-.react-number-card-wrapper {
-
-}
-
 .react-number-card {
-  padding: 2rem;
-  background: #111;
-  color: #fff;
-  text-align: center;
+  background: #dddddd;
+  color: #000;
   margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+
+  &.dark {
+    background: #111;
+    color: #fff;
+  }
+
+  .number {
+    display: block;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .label {
+    display: block;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
 }

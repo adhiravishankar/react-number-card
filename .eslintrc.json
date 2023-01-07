@@ -1,0 +1,13 @@
+{
+  "ignorePatterns": ["coverage", "dist", "example-dist", "node_modules"],
+  "extends": ["airbnb-typescript"],
+  "plugins": ["import","react","simple-import-sort"],
+  "parserOptions": {
+    "project": "./tsconfig.test.json"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
+}

@@ -1,4 +1,4 @@
-import React, {ComponentPropsWithoutRef} from 'react';
+import React, { ComponentPropsWithoutRef } from 'react';
 
 
 export interface ReactNumberCardProps {
@@ -8,18 +8,17 @@ export interface ReactNumberCardProps {
 
   color: string;
 
-  wrapperProps?: Omit<ComponentPropsWithoutRef<"div">, "style">;
+  wrapperProps?: Omit<ComponentPropsWithoutRef<'div'>, 'style'>;
 }
 
 export function ReactNumberCard(props: ReactNumberCardProps) {
-  const { color, labelText, numberText, wrapperProps } = props;
+  const { labelText, numberText, wrapperProps } = props;
+  const color = props.color ?? randomColor();
   return (
-    <div className="react-number-card-wrapper" style={ { background: color } } { ...wrapperProps }>
-      <div className="react-number-card">
-        <span className="number">{ numberText }</span>
-        <span className="label">{ labelText }</span>
-      </div>
+    <div className="react-number-card" style={ { borderBottom: `solid 0.5rem ${ color }` } }>
+      <span className="number">{ numberText }</span>
+      <span className="label">{ labelText }</span>
     </div>
-  )
+  );
 }
 
