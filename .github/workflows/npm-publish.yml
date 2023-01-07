@@ -1,5 +1,11 @@
 name: Publish Package to npmjs
 on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: Publish
+        description: Publish
+
   release:
     types: [created]
 jobs:
