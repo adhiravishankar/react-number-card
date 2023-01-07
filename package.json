@@ -1,7 +1,11 @@
 {
   "name": "react-number-card",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.22.0",
-  "typings": "./dist/typings",
+  "types": "dist/typings",
+  "typings": "dist/typings",
+  "main": "dist/umd/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
     "build": "redrun --series build:components build:parcel",
     "build:components": "redrun --parallel build:cjs build:esm build:sass",
@@ -18,6 +22,7 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.3.1",
+    "@testing-library/dom": "^8.19.1",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^18.11.18",
     "@types/jest": "^29.2.5",
