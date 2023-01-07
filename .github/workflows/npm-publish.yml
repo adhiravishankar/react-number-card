@@ -20,7 +20,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm install -g pnpm
       - run: pnpm install
-      - run: pnpm build
+      - run: pnpm build:components
       - run: pnpm test
       - run: npm publish
         env:
