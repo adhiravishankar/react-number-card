@@ -23,6 +23,7 @@ jobs:
       - run: pnpm build:components
       - run: pnpm test
       - run: npm set //registry.npmjs.org/:_authToken $NPM_TOKEN
+      - run: npm login
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
