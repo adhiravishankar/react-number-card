@@ -22,6 +22,8 @@ jobs:
       - run: pnpm install
       - run: pnpm build:components
       - run: pnpm test
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - run: ls -al
       - run: npx release-it
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
