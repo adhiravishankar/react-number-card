@@ -23,6 +23,7 @@ jobs:
       - run: pnpm build:components
       - run: pnpm test
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - run: cat .npmrc
       - run: npm login
       - run: npx release-it
         env:
