@@ -22,7 +22,6 @@ jobs:
       - run: pnpm install
       - run: pnpm build:components
       - run: pnpm test
-      - run: npm login
-      - run: npm publish
+      - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
